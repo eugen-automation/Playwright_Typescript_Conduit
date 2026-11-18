@@ -11,6 +11,9 @@
   },
   "keywords": [],
   "type": "commonjs",
+  "engines": {
+    "node": ">=26 <27"
+  },
   "devDependencies": {
     "@faker-js/faker": "^10.6.0",
     "@playwright/test": "^1.65.1",

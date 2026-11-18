@@ -1,6 +1,6 @@
 # Conduit QA — test automation
 
-Playwright + TypeScript. API tests in tests/api, UI tests (week 2) in tests/ui.
+Playwright + TypeScript. API tests in tests/api, UI tests in tests/ui.
 
 ## Conventions
 - Import `test` and `expect` from src/fixtures, never from @playwright/test.
