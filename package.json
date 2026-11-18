@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:api": "playwright test --project=api --workers=1",
+    "test:api": "playwright test --project=api --workers=2",
     "test:smoke": "playwright test --project=api --grep @smoke",
     "typecheck": "tsc --noEmit",
     "update.packages": "npm i npm-check-updates && ncu -u && npm i"
