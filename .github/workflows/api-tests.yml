@@ -62,15 +62,3 @@ jobs:
             test-results/
           retention-days: 14
           if-no-files-found: error
-
-      - name: Link report in run summary
-        if: ${{ !cancelled() && steps.reports.outputs.artifact-url != '' }}
-        env:
-          REPORT_URL: ${{ steps.reports.outputs.artifact-url }}
-        run: |
-          {
-            printf '### API test report\n\n'
-            printf '[Download HTML report, JUnit results, and traces](%s)\n\n' "$REPORT_URL"
-            printf 'Extract the archive, then run `npx playwright show-report <extracted-folder>/playwright-report`.\n\n'
-            printf 'Reports are retained for 14 days. GitHub sign-in is required.\n'
-          } >> "$GITHUB_STEP_SUMMARY"
